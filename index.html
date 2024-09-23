@@ -1,0 +1,377 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Human Birds - Folk Songs</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="apple-mobile-web-app-title" content="Humand Birds" />
+    <meta name="application-name" content="Humand Birds" />
+    <meta name="msapplication-TileColor" content="#b91d47" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,1,0"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body
+    class="bg-amber-600 bg-bkg bg-cover bg-fixed bg-center bg-no-repeat text-humanBird"
+  >
+    <!-- NAV -->
+    <nav class="mx-auto my-0 max-w-7xl p-4 md:flex md:justify-center">
+      <h1 class="hidden">Human Birds - Folk Songs</h1>
+      <input class="peer hidden" type="checkbox" id="menu-btn" />
+      <ul
+        class="mt-2 max-h-0 list-none overflow-hidden p-0 text-center font-black uppercase peer-checked:max-h-none md:mt-0 md:flex md:max-h-none"
+      >
+        <li class="p-4 md:ml-12 md:px-0 md:py-4">
+          <a class="text-3xl" href="#music">Music</a>
+        </li>
+        <li
+          class="border-t border-gray-600 p-4 md:ml-12 md:border-none md:px-0 md:py-4"
+        >
+          <a class="text-3xl" href="#video">Video</a>
+        </li>
+        <li
+          class="border-t border-gray-600 p-4 md:ml-12 md:border-none md:px-0 md:py-4"
+        >
+          <a class="text-3xl" href="#dates">Dates</a>
+        </li>
+        <li
+          class="border-t border-gray-600 p-4 md:ml-12 md:border-none md:px-0 md:py-4"
+        >
+          <a class="text-3xl" href="#contact">Contact/Liens</a>
+        </li>
+      </ul>
+      <label
+        class="peer-checked:nav-active absolute right-4 top-0 p-0 md:hidden"
+        for="menu-btn"
+      >
+        <span class="material-symbols-outlined text-4xl">menu</span>
+        <span class="material-symbols-outlined hidden text-4xl">close</span>
+      </label>
+    </nav>
+    <!-- HERO -->
+    <section class="">
+      <img class="block w-full" src="assets/hero.png" alt="Hero image" />
+    </section>
+    <!-- MUSIC -->
+    <section class="mx-auto max-w-3xl px-4 py-16 md:flex" id="music">
+      <div class="text-lg text-stone-700 md:w-1/2 md:pr-2">
+        <h2 class="mb-8 text-5xl">Music</h2>
+        <p class="font-Pangolin mb-8 text-gray-200">
+          Guigui et le Ig, deux amis de longue date, ont contracté leur nom et
+          leur talent pour former "The Gig". Ils n'ont pas tardé à réunir une
+          section rythmique à la hauteur de leurs ambitions : Théo et Antho,
+          respectivement bassiste et batteur. Le quatuor nous livre un son chaud
+          avec des instruments organiques, une énergie rock teintée de blues.
+        </p>
+        <div class="mb-16">
+          <a
+            class="mr-4"
+            target="_blank"
+            href="https://open.spotify.com/intl-fr/artist/0a1fB8K1jfq0sr9dy5yGtT"
+            ><i class="fa-2xl fa-brands fa-spotify"></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.deezer.com/fr/artist/246154792?deferredFl=1"
+            ><i class="fa-2xl fa-brands fa-deezer"></i
+          ></a>
+        </div>
+      </div>
+      <div class="md:w-1/2 md:pl-2">
+        <!-- <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/album/1uydKZUPkpr9A0OsWhMtht?utm_source=generator&theme=0"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe> -->
+        <iframe
+          title="deezer-widget"
+          src="https://widget.deezer.com/widget/dark/artist/246154792/top_tracks"
+          width="100%"
+          height="370"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media; clipboard-write"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+    <!-- VIDEO -->
+    <section
+      class="relative h-64 border-b-4 border-t-4 border-double border-gray-400 bg-red-950 md:h-[100vh]"
+      id="video"
+    >
+      <iframe
+        class="absolute left-0 top-0 h-full w-full"
+        src="https://www.youtube.com/embed/SYP3YkVyaK0"
+        title="Full set - Label Tremp"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </section>
+    <!-- FOOTER -->
+    <section
+      class="font-Pangolin mx-auto max-w-3xl px-4 py-16 text-lg text-gray-200"
+    >
+      <div class="mb-16">
+        <h2 class="mb-8 text-5xl" id="dates">Dates</h2>
+        <ul class="md:list-disc md:columns-2 md:gap-10">
+          <li class="mb-4 opacity-70">
+            21/05/2022 - <b>Rock Show #1</b> -
+            <em>Marcilly en Marcilly-en-Villette</em>
+          </li>
+          <li class="mb-4 opacity-70">18/06/2022 - <b>Léo Resto</b></li>
+          <li class="mb-4 opacity-70">
+            11/09/2022 - <b>Jardins en fête</b> - <em>Mareau-aux-Prés</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            08/10/2022 - <b>Fête de l'automne</b> -
+            <em>Marcilly-en-Villette</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            20/01/2023 - <b>Session acoustique</b> -
+            <em>Mavrica, Radio Arc-en-ciel</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            08/02/2023 - <b>Péniche Antipode</b> - <em>Paris</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            18/03/2023 -
+            <b><a href="https://www.labeltremp.fr/">Label Tremp</a></b> -
+            <em>Le Hangar, Châlette sur Loing</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            08/04/2023 -
+            <b
+              ><a
+                target="_blank"
+                href="https://www.facebook.com/events/944686669888486/"
+                >Festival "Nos vieux zikos ont du talent"</a
+              ></b
+            >
+            - <em>La Scène du Loing, Nemours(77)</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            14/05/2023 -
+            <b
+              ><a target="_blank" href="https://www.abcd45.com/"
+                >Parcours et Jardins</a
+              ></b
+            >
+            - <em>à 14h30 - Orléans</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            02/06/2023 -
+            <b
+              ><a target="_blank" href="https://fb.me/e/4qv9NbnUS"
+                >Concert avec Chillidogs</a
+              ></b
+            >
+            - <em>La Halle de Jargeau(45)</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            23/06/2023 - <b>Concert acoustique</b> -
+            <em>Marcilly-en-Villette</em>
+          </li>
+
+          <li class="mb-4 opacity-70">
+            03/06/2023 -
+            <b
+              >Rock Show #2 du
+              <a
+                target="_blank"
+                href="https://www.facebook.com/profile.php?id=100083121171165"
+                >Garajazik</a
+              ></b
+            >
+            - <em>Marcilly-en-Villette</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            24/06/2023 -
+            <b
+              ><a href="https://au-bistrot-gourmand.fr/">Bistrot Gourmand</a></b
+            >
+            - <em>La Ferté-Saint-Aubin</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            02/07/2023 -
+            <b
+              >Festival
+              <a href="https://www.facebook.com/musiqafon"
+                >Les Nanteliennes</a
+              ></b
+            >
+            - <em>Nanteau-sur-Lunain(77)</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            08/07/2023 -
+            <b
+              >Festival
+              <a href="https://www.facebook.com/faitesdufoin"
+                >Faites du foin</a
+              ></b
+            >
+            - <em>Férolles(45)</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            18/07/2023 -
+            <b>Tremplin Jargeau Plage</b>
+            - <em>Jargeau (45)</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            09/09/2023 -
+            <b>Moncourt en fête</b>
+            - <em>Moncourt Fromonville (77)</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            10/09/2023 -
+            <b
+              ><a href="https://jardinsenfete.wordpress.com/"
+                >Jardins en fête</a
+              ></b
+            >
+            -
+            <em>Mareau-aux-Prés(45)</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            07/10/2023 -
+            <b>Finale du tremplin Jargeau Plage</b>
+            - <em>Jargeau (45)</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            28/10/2023 -
+            <b
+              ><a href="https://www.facebook.com/profile.php?id=100089691164262"
+                >Siwa Bleury</a
+              ></b
+            >
+            - <em>Poilly-sur-Tholon (89)</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            15/06/2024 -
+            <b
+              ><a target="_blank" href="https://www.velvetthirst.com/actus"
+                >Velvet Thirst</a
+              ></b
+            >
+            - <em> à 17h30 - Outarville (45)</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            29/06/2024 -
+            <b
+              ><a target="_blank" href="https://au-bistrot-gourmand.fr/"
+                >Bistrot Gourmand</a
+              ></b
+            >
+            - <em>La Ferté-Saint-Aubin (45)</em>
+          </li>
+          <li class="mb-4 opacity-70">
+            20/07/2024 -
+            <b
+              ><a
+                target="_blank"
+                href="https://www.facebook.com/doctorbeermelun/"
+                >Dr Beer</a
+              ></b
+            >
+            - <em>Melun (77)</em>
+          </li>
+          <li class="mb-4">
+            07/09/2024 -
+            <b>Lacour des Grands - Bar</b>
+            - <em>Sury aux Bois (45)</em>
+          </li>
+          <li class="mb-4">
+            14/09/2024 -
+            <b
+              ><a
+                target="_blank"
+                href="https://www.sandillon.fr/actualites/sandiculture-revient/"
+                >Festival Sandiculture</a
+              ></b
+            >
+            - <em>Sandillon (45)</em>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="mb-8 text-5xl" id="contact">Contact</h2>
+        <div class="h-16 md:flex md:items-center">
+          <a
+            class="mr-8"
+            target="_blank"
+            href="https://www.facebook.com/thegigbluesrockband"
+            ><i class="fa-2xl fa-brands fa-square-facebook"></i
+          ></a>
+          <a
+            class="mr-8"
+            target="_blank"
+            href="https://www.youtube.com/@thegigbluesrockband644"
+            ><i class="fa-2xl fa-brands fa-youtube"></i
+          ></a>
+          <a
+            class="mr-8"
+            target="_blank"
+            href="https://open.spotify.com/album/16gi5BBXYRsjlOMzpxqe5n"
+            ><i class="fa-2xl fa-brands fa-spotify"></i
+          ></a>
+          <a
+            class="mr-8"
+            target="_blank"
+            href="https://deezer.page.link/MS2DFqEbQBij52NPA"
+            ><i class="fa-2xl fa-brands fa-deezer"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- COPYRIGHT -->
+    <div
+      class="flex items-center justify-center border-t-4 border-double border-gray-400 px-4 py-8"
+    >
+      <small class="font-Pangolin text-xs text-gray-400"
+        >Webmaster :
+        <a
+          class="font-Pangolin text-xs"
+          target="_blank"
+          href="https://github.com/guizput"
+          >guizput</a
+        ></small
+      >
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/c7a7aada7c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
