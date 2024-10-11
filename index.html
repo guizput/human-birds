@@ -75,7 +75,11 @@
     </nav>
     <!-- HERO -->
     <section class="">
-      <img class="block w-full" src="assets/hero.png" alt="Hero image" />
+      <picture>
+        <source media="(max-width:768px)" srcset="assets/hero-mobile.png" />
+        <source media="(min-width:768px)" srcset="assets/hero.png" />
+        <img src="assets/hero.png" alt="" class="block w-full" />
+      </picture>
     </section>
     <!-- MUSIC -->
     <section
@@ -107,11 +111,11 @@
       </div>
       <div class="flex justify-center md:block md:w-1/2 md:pl-2">
         <iframe
-          style="border: 0; width: 370px; height: 442px"
-          src="https://bandcamp.com/EmbeddedPlayer/track=3721127693/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/"
+          style="border: 0; width: 400px; height: 208px"
+          src="https://bandcamp.com/EmbeddedPlayer/album=2848253469/size=large/bgcol=ffffff/linkcol=e99708/artwork=small/transparent=true/"
           seamless
-          ><a href="https://samiraarianne.bandcamp.com/track/transient-serenity"
-            >Transient Serenity de Samira Arianne</a
+          ><a href="https://humanbirds.bandcamp.com/album/live"
+            >Live ! de Human Birds</a
           ></iframe
         >
       </div>
@@ -120,7 +124,7 @@
     <section class="relative h-64 bg-amber-600 md:h-[75vh]" id="video">
       <iframe
         class="absolute left-0 top-0 h-full w-full"
-        src="https://www.youtube.com/embed/B9FzVhw8_bY"
+        src="https://www.youtube.com/embed/1Qj-tFa7GLI"
         title="Teaser"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -145,19 +149,28 @@
       <div>
         <h2 class="mb-8 text-5xl uppercase" id="contact">Contacts & Liens</h2>
         <div class="h-16 md:flex md:items-center">
-          <a class="mr-8" target="_blank" href="mailto:"
+          <a
+            class="mr-8"
+            target="_blank"
+            href="mailto:humanbirdsmusic@gmail.com"
             ><i class="fa-2xl fa-solid fa-envelope"></i
           ></a>
-          <a class="mr-8" target="_blank" href="https://www.facebook.com/"
+          <a
+            class="mr-8"
+            target="_blank"
+            href="https://www.facebook.com/HumanBirdsMusic"
             ><i class="fa-2xl fa-brands fa-square-facebook"></i
           ></a>
-          <a class="mr-8" target="_blank" href="https://www.youtube.com/"
+          <a
+            class="mr-8"
+            target="_blank"
+            href="https://www.youtube.com/@HumanBirdsMusic"
             ><i class="fa-2xl fa-brands fa-youtube"></i
           ></a>
-          <a class="mr-8" target="_blank" href="https://open.spotify.com/"
+          <!-- <a class="mr-8" target="_blank" href="https://open.spotify.com/"
             ><i class="fa-2xl fa-brands fa-spotify"></i
-          ></a>
-          <a class="mr-8" target="_blank" href="https://bandcamp.com/"
+          ></a> -->
+          <a class="mr-8" target="_blank" href="http://humanbirds.bandcamp.com/"
             ><i class="fa-2xl fa-brands fa-bandcamp"></i
           ></a>
         </div>
