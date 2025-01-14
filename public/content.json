@@ -1,0 +1,54 @@
+{
+  "nav": ["Music", "Video", "Dates", "Contact/Liens"],
+  "hero": {
+    "desktop": "/hero.png",
+    "mobile": "/hero-mobile.png"
+  },
+  "music": {
+    "title": "Music",
+    "desc": "Mélodies de cordes et harmonies vocales se mêlent aux percussions dans une alchimie aux sonorités folk.\nUne ambiance intimiste, un voyage musical fort en émotions.",
+    "iframe": {
+      "src": "https://bandcamp.com/EmbeddedPlayer/album=2848253469/size=large/bgcol=ffffff/linkcol=e99708/artwork=small/transparent=true/"
+    }
+  },
+  "video": {
+    "title": "Teaser",
+    "youtubeID": "1Qj-tFa7GLI"
+  },
+  "footer": {
+    "titleDates": "Dates",
+    "dates": [
+      {
+        "date": "22.06.2024",
+        "name": "Fête de la musique",
+        "location": "VOUZON (41)",
+        "link": ""
+      },
+      {
+        "date": "12.07.2024",
+        "name": "Festival Faites du Foin !",
+        "location": "FEROLLES (45)",
+        "link": ""
+      }
+    ],
+    "titleContacts": "Contacts & Liens",
+    "contacts": [
+      {
+        "link": "mailto:humanbirdsmusic@gmail.com",
+        "icon": "fa-solid fa-envelope"
+      },
+      {
+        "link": "https://www.facebook.com/HumanBirdsMusic",
+        "icon": "fa-brands fa-square-facebook"
+      },
+      {
+        "link": "https://www.youtube.com/@HumanBirdsMusic",
+        "icon": "fa-brands fa-youtube"
+      },
+      {
+        "link": "http://humanbirds.bandcamp.com/",
+        "icon": "fa-brands fa-bandcamp"
+      }
+    ]
+  }
+}
