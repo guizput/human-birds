@@ -12,6 +12,7 @@ const Admin = () => {
   const { data, loading } = useFetch("/content.json");
   const [content, setContent] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isPublishing, setIsPublishing] = useState(false);
 
   useEffect(() => {
     setContent(data);
@@ -25,23 +26,9 @@ const Admin = () => {
       </div>
     );
 
-  const handleSave = async () => {
-    return;
-    try {
-      const response = await fetch("/api/updateContent", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(content),
-      });
-
-      if (response.ok) {
-        alert("Changements sauvegardés !");
-      } else {
-        alert("Erreur lors de la sauvegarde.");
-      }
-    } catch (err) {
-      alert("Erreur réseau : " + err.message);
-    }
+  const handlePublish = async () => {
+    console.log(content);
+    setIsPublishing(true);
   };
 
   return (
@@ -49,7 +36,8 @@ const Admin = () => {
       <Navbar
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
-        handleSave={handleSave}
+        handlePublish={handlePublish}
+        isPublishing={isPublishing}
       />
 
       <div className="mt-[59px] flex flex-grow">

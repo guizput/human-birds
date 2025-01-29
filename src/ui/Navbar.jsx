@@ -1,17 +1,13 @@
-import { useState } from "react";
-
 import Spinner from "../ui/Spinner";
 
 export default function Navbar({
   isSidebarOpen,
   setIsSidebarOpen,
-  handleSave,
+  handlePublish,
+  isPublishing,
 }) {
-  const [isPublishing, setIsPublishing] = useState(false);
-
   function handleClick() {
-    setIsPublishing(true);
-    handleSave();
+    handlePublish();
   }
 
   return (

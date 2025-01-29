@@ -14,7 +14,12 @@ export function Music({ data }) {
       </div>
       <div className="flex justify-center md:block md:w-1/2 md:pl-2">
         <iframe
-          style={{ border: 0, width: "400px", height: "208px" }}
+          style={{
+            border: 0,
+            width: "400px",
+            height: "208px",
+            maxWidth: "100%",
+          }}
           src={data.iframe.src}
           seamless
         ></iframe>
