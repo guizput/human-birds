@@ -8,6 +8,9 @@ import Footer from "../components/Footer";
 import Navbar from "../ui/Navbar";
 import Sidebar from "../ui/Sidebar";
 import FileInput from "../ui/FileInput";
+import ToggleElement from "../ui/ToggleElement";
+import TextInput from "../ui/TextInput";
+import TextArea from "../ui/TextArea";
 
 const CMS = () => {
   const { data, loading } = useFetch("/content.json");
@@ -56,30 +59,29 @@ const CMS = () => {
 
       <div className="mt-[59px] flex flex-grow">
         <Sidebar isSidebarOpen={isSidebarOpen}>
-          <h2 className="text-lg font-bold">Hero</h2>
-          <FileInput
-            title="Image"
-            options={{
-              maxSizeMB: 1,
-              maxWidthOrHeight: 1600,
-              useWebWorker: true,
-            }}
-            onChange={(value) =>
-              setContent({
-                ...content,
-                hero: {
-                  desktop: value,
-                  mobile: value,
-                },
-              })
-            }
-          />
+          <ToggleElement title="Hero">
+            <FileInput
+              title="Image"
+              options={{
+                maxSizeMB: 1,
+                maxWidthOrHeight: 1600,
+                useWebWorker: true,
+              }}
+              onChange={(value) =>
+                setContent({
+                  ...content,
+                  hero: {
+                    desktop: value,
+                    mobile: value,
+                  },
+                })
+              }
+            />
+          </ToggleElement>
 
-          <h2 className="text-lg font-bold">Music</h2>
-          <div className="mt-4">
-            <label className="block font-medium">Titre :</label>
-            <input
-              type="text"
+          <ToggleElement title="Music">
+            <TextInput
+              title="Titre"
               value={content.music.title}
               onChange={(e) =>
                 setContent({
@@ -87,12 +89,9 @@ const CMS = () => {
                   music: { ...content.music, title: e.target.value },
                 })
               }
-              className="mt-2 w-full rounded border p-2"
             />
-          </div>
-          <div className="mt-4">
-            <label className="block font-medium">Texte à propos :</label>
-            <textarea
+            <TextArea
+              title="Texte"
               value={content.music.desc}
               onChange={(e) =>
                 setContent({
@@ -100,9 +99,8 @@ const CMS = () => {
                   music: { ...content.music, desc: e.target.value },
                 })
               }
-              className="mt-2 w-full rounded border p-2"
             />
-          </div>
+          </ToggleElement>
         </Sidebar>
 
         <div className="bg-amber-600 bg-bkg bg-cover bg-center bg-no-repeat text-humanBird">

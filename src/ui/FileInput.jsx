@@ -46,7 +46,7 @@ function FileInput({ title, options, onChange }) {
   return (
     <div className="flex flex-col space-y-3">
       {/* Label */}
-      <label className="text-lg font-medium text-gray-700">{title}</label>
+      <label className="text-sm font-medium text-gray-700">{title}</label>
 
       {/* File Input */}
       <input
