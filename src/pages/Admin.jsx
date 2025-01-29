@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useFetch from "../hooks/useFetch";
-import Nav from "../components/Nav";
+import { EditNav, Nav } from "../components/Nav";
 import { Hero, EditHero } from "../components/Hero";
 import { EditMusic, Music } from "../components/Music";
 import { EditVideo, Video } from "../components/Video";
@@ -54,6 +54,7 @@ const Admin = () => {
 
       <div className="mt-[59px] flex flex-grow">
         <Sidebar isSidebarOpen={isSidebarOpen}>
+          <EditNav content={content} setContent={setContent} />
           <EditHero content={content} setContent={setContent} />
           <EditMusic content={content} setContent={setContent} />
           <EditVideo content={content} setContent={setContent} />

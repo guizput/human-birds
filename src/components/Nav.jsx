@@ -1,6 +1,8 @@
 import { useState } from "react";
+import ToggleElement from "../ui/ToggleElement";
+import TextInput from "../ui/TextInput";
 
-export default function Nav({ data }) {
+export function Nav({ data }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -44,5 +46,26 @@ export default function Nav({ data }) {
         </label>
       </nav>
     </>
+  );
+}
+
+export function EditNav({ content, setContent }) {
+  function handleChange(e, index) {
+    const newNav = [...content.nav];
+    newNav[index] = e.target.value;
+    setContent({ ...content, nav: newNav });
+  }
+
+  return (
+    <ToggleElement title="Nav">
+      {content.nav.map((item, index) => (
+        <TextInput
+          key={index}
+          title={`Section N°${index + 1}`}
+          value={item}
+          onChange={(e) => handleChange(e, index)}
+        />
+      ))}
+    </ToggleElement>
   );
 }
