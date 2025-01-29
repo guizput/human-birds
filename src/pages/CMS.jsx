@@ -7,6 +7,7 @@ import Video from "../components/Video";
 import Footer from "../components/Footer";
 import Navbar from "../ui/Navbar";
 import Sidebar from "../ui/Sidebar";
+import FileInput from "../ui/FileInput";
 
 const CMS = () => {
   const { data, loading } = useFetch("/content.json");
@@ -55,7 +56,26 @@ const CMS = () => {
 
       <div className="mt-[59px] flex flex-grow">
         <Sidebar isSidebarOpen={isSidebarOpen}>
-          <h2 className="text-lg font-bold">Modifier le contenu</h2>
+          <h2 className="text-lg font-bold">Hero</h2>
+          <FileInput
+            title="Image"
+            options={{
+              maxSizeMB: 1,
+              maxWidthOrHeight: 1600,
+              useWebWorker: true,
+            }}
+            onChange={(value) =>
+              setContent({
+                ...content,
+                hero: {
+                  desktop: value,
+                  mobile: value,
+                },
+              })
+            }
+          />
+
+          <h2 className="text-lg font-bold">Music</h2>
           <div className="mt-4">
             <label className="block font-medium">Titre :</label>
             <input
