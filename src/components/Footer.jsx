@@ -1,3 +1,4 @@
+import Button from "../ui/Button";
 import TextInput from "../ui/TextInput";
 import ToggleElement from "../ui/ToggleElement";
 
@@ -41,6 +42,51 @@ export function Footer({ data }) {
 }
 
 export function EditFooter({ content, setContent }) {
+  function handleAddDate(e) {
+    const newDate = {
+      date: "01.01.2025",
+      name: "Nom de l'event",
+      location: "LIEU (45)",
+      link: "",
+    };
+    setContent({
+      ...content,
+      footer: {
+        ...content.footer,
+        dates: [...content.footer.dates, newDate],
+      },
+    });
+  }
+
+  function handleDeleteDate(id) {
+    const newDates = content.footer.dates.filter((item, index) => index !== id);
+    setContent({ ...content, footer: { ...content.footer, dates: newDates } });
+  }
+
+  function handleAddContact(e) {
+    const newContact = {
+      link: "https://www.facebook.com/HumanBirdsMusic",
+      icon: "fa-brands fa-square-facebook",
+    };
+    setContent({
+      ...content,
+      footer: {
+        ...content.footer,
+        contacts: [...content.footer.contacts, newContact],
+      },
+    });
+  }
+
+  function handleDeleteContact(id) {
+    const newContacts = content.footer.contacts.filter(
+      (item, index) => index !== id,
+    );
+    setContent({
+      ...content,
+      footer: { ...content.footer, contacts: newContacts },
+    });
+  }
+
   return (
     <ToggleElement title="Footer">
       <TextInput
@@ -53,6 +99,77 @@ export function EditFooter({ content, setContent }) {
           })
         }
       />
+      {content.footer.dates.map((date, index) => (
+        <ToggleElement key={index} title={`Date N°${index + 1}`}>
+          <TextInput
+            title="Date"
+            value={date.date}
+            onChange={(e) => console.log(date)}
+          />
+          <TextInput
+            title="Name"
+            value={date.name}
+            onChange={(e) => console.log(date)}
+          />
+          <TextInput
+            title="Location"
+            value={date.location}
+            onChange={(e) => console.log(date)}
+          />
+          <TextInput
+            title="Link"
+            value={date.link}
+            onChange={(e) => console.log(date)}
+          />
+          {content.footer.dates.length > 1 && (
+            <>
+              <hr className="my-6 border-t border-stone-400" />
+              <Button type="danger" onClick={() => handleDeleteDate(index)}>
+                Supprimer
+              </Button>
+            </>
+          )}
+        </ToggleElement>
+      ))}
+      <Button type="secondary" onClick={(e) => handleAddDate(e)}>
+        Ajouter une date
+      </Button>
+      <hr className="my-8 border-t border-stone-400" />
+      <TextInput
+        title="Titre Contacts"
+        value={content.footer.titleContacts}
+        onChange={(e) =>
+          setContent({
+            ...content,
+            footer: { ...content.footer, titleContacts: e.target.value },
+          })
+        }
+      />
+      {content.footer.contacts.map((contact, index) => (
+        <ToggleElement key={index} title={`Contact N°${index + 1}`}>
+          <TextInput
+            title="Date"
+            value={contact.icon}
+            onChange={(e) => console.log(contact)}
+          />
+          <TextInput
+            title="Name"
+            value={contact.link}
+            onChange={(e) => console.log(contact)}
+          />
+          {content.footer.contacts.length > 1 && (
+            <>
+              <hr className="my-6 border-t border-stone-400" />
+              <Button type="danger" onClick={() => handleDeleteContact(index)}>
+                Supprimer
+              </Button>
+            </>
+          )}
+        </ToggleElement>
+      ))}
+      <Button type="secondary" onClick={(e) => handleAddContact(e)}>
+        Ajouter un contact
+      </Button>
     </ToggleElement>
   );
 }
