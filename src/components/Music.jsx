@@ -1,4 +1,8 @@
-export default function Music({ data }) {
+import TextArea from "../ui/TextArea";
+import TextInput from "../ui/TextInput";
+import ToggleElement from "../ui/ToggleElement";
+
+export function Music({ data }) {
   return (
     <section
       className="mx-auto max-w-3xl px-4 pb-16 pt-0 text-center md:flex md:pt-16 md:text-left"
@@ -16,5 +20,42 @@ export default function Music({ data }) {
         ></iframe>
       </div>
     </section>
+  );
+}
+
+export function EditMusic({ content, setContent }) {
+  return (
+    <ToggleElement title="Music">
+      <TextInput
+        title="Titre"
+        value={content.music.title}
+        onChange={(e) =>
+          setContent({
+            ...content,
+            music: { ...content.music, title: e.target.value },
+          })
+        }
+      />
+      <TextArea
+        title="Texte"
+        value={content.music.desc}
+        onChange={(e) =>
+          setContent({
+            ...content,
+            music: { ...content.music, desc: e.target.value },
+          })
+        }
+      />
+      <TextInput
+        title="iFrame BandCamp"
+        value={content.music.iframe.src}
+        onChange={(e) =>
+          setContent({
+            ...content,
+            music: { ...content.music, iframe: { src: e.target.value } },
+          })
+        }
+      />
+    </ToggleElement>
   );
 }

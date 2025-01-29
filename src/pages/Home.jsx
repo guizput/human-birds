@@ -1,8 +1,8 @@
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
-import Music from "../components/Music";
+import { Footer } from "../components/Footer";
+import { Hero } from "../components/Hero";
+import { Music } from "../components/Music";
 import Nav from "../components/Nav";
-import Video from "../components/Video";
+import { Video } from "../components/Video";
 import useFetch from "../hooks/useFetch";
 
 function Home() {

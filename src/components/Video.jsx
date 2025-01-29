@@ -1,4 +1,7 @@
-export default function Video({ data }) {
+import TextInput from "../ui/TextInput";
+import ToggleElement from "../ui/ToggleElement";
+
+export function Video({ data }) {
   return (
     <section className="relative h-64 bg-amber-600 md:h-[75vh]" id="video">
       <iframe
@@ -10,5 +13,22 @@ export default function Video({ data }) {
         allowFullScreen
       ></iframe>
     </section>
+  );
+}
+
+export function EditVideo({ content, setContent }) {
+  return (
+    <ToggleElement title="Video">
+      <TextInput
+        title="Youtube ID"
+        value={content.video.youtubeID}
+        onChange={(e) =>
+          setContent({
+            ...content,
+            video: { ...content.video, youtubeID: e.target.value },
+          })
+        }
+      />
+    </ToggleElement>
   );
 }

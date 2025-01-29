@@ -1,4 +1,7 @@
-export default function Footer({ data }) {
+import TextInput from "../ui/TextInput";
+import ToggleElement from "../ui/ToggleElement";
+
+export function Footer({ data }) {
   return (
     <section className="mx-auto max-w-4xl px-4 py-16 text-lg md:flex md:space-x-20">
       <div className="mb-16">
@@ -34,5 +37,22 @@ export default function Footer({ data }) {
         </div>
       </div>
     </section>
+  );
+}
+
+export function EditFooter({ content, setContent }) {
+  return (
+    <ToggleElement title="Footer">
+      <TextInput
+        title="Titre Dates"
+        value={content.footer.titleDates}
+        onChange={(e) =>
+          setContent({
+            ...content,
+            footer: { ...content.footer, titleDates: e.target.value },
+          })
+        }
+      />
+    </ToggleElement>
   );
 }

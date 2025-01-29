@@ -1,23 +1,18 @@
 import React, { useEffect, useState } from "react";
 import useFetch from "../hooks/useFetch";
 import Nav from "../components/Nav";
-import Hero from "../components/Hero";
-import Music from "../components/Music";
-import Video from "../components/Video";
-import Footer from "../components/Footer";
+import { Hero, EditHero } from "../components/Hero";
+import { EditMusic, Music } from "../components/Music";
+import { EditVideo, Video } from "../components/Video";
+import { EditFooter, Footer } from "../components/Footer";
 import Navbar from "../ui/Navbar";
 import Sidebar from "../ui/Sidebar";
-import FileInput from "../ui/FileInput";
-import ToggleElement from "../ui/ToggleElement";
-import TextInput from "../ui/TextInput";
-import TextArea from "../ui/TextArea";
 
-const CMS = () => {
+const Admin = () => {
   const { data, loading } = useFetch("/content.json");
   const [content, setContent] = useState(null);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // État de la sidebar
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Change le title SEO de la page
   useEffect(() => {
     setContent(data);
     document.title = "Admin - HumanBirds";
@@ -59,48 +54,10 @@ const CMS = () => {
 
       <div className="mt-[59px] flex flex-grow">
         <Sidebar isSidebarOpen={isSidebarOpen}>
-          <ToggleElement title="Hero">
-            <FileInput
-              title="Image"
-              options={{
-                maxSizeMB: 1,
-                maxWidthOrHeight: 1600,
-                useWebWorker: true,
-              }}
-              onChange={(value) =>
-                setContent({
-                  ...content,
-                  hero: {
-                    desktop: value,
-                    mobile: value,
-                  },
-                })
-              }
-            />
-          </ToggleElement>
-
-          <ToggleElement title="Music">
-            <TextInput
-              title="Titre"
-              value={content.music.title}
-              onChange={(e) =>
-                setContent({
-                  ...content,
-                  music: { ...content.music, title: e.target.value },
-                })
-              }
-            />
-            <TextArea
-              title="Texte"
-              value={content.music.desc}
-              onChange={(e) =>
-                setContent({
-                  ...content,
-                  music: { ...content.music, desc: e.target.value },
-                })
-              }
-            />
-          </ToggleElement>
+          <EditHero content={content} setContent={setContent} />
+          <EditMusic content={content} setContent={setContent} />
+          <EditVideo content={content} setContent={setContent} />
+          <EditFooter content={content} setContent={setContent} />
         </Sidebar>
 
         <div className="bg-amber-600 bg-bkg bg-cover bg-center bg-no-repeat text-humanBird">
@@ -115,4 +72,4 @@ const CMS = () => {
   );
 };
 
-export default CMS;
+export default Admin;
