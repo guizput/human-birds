@@ -1,174 +1,26 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Human Birds - Folk Songs</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="/assets/favicon-48x48.png"
-      sizes="48x48"
-    />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/apple-touch-icon.png"
-    />
+    <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Human Birds" />
-    <link rel="manifest" href="/assets/site.webmanifest" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,1,0"
     />
-    <link rel="stylesheet" href="main.css" />
   </head>
-
-  <body
-    class="bg-amber-600 bg-bkg bg-cover bg-center bg-no-repeat text-humanBird"
-  >
-    <!-- NAV -->
-    <nav class="mx-auto my-0 max-w-7xl p-4 md:flex md:justify-center">
-      <h1 class="hidden">Human Birds - Folk Songs</h1>
-      <input class="peer hidden" type="checkbox" id="menu-btn" />
-      <ul
-        class="mt-2 max-h-0 list-none overflow-hidden p-0 text-center font-black uppercase peer-checked:max-h-none md:mt-0 md:flex md:max-h-none"
-      >
-        <li class="p-4 md:ml-12 md:px-0 md:py-4">
-          <a class="text-3xl" href="#music">Music</a>
-        </li>
-        <li
-          class="border-t border-gray-600 p-4 md:ml-12 md:border-none md:px-0 md:py-4"
-        >
-          <a class="text-3xl" href="#video">Video</a>
-        </li>
-        <li
-          class="border-t border-gray-600 p-4 md:ml-12 md:border-none md:px-0 md:py-4"
-        >
-          <a class="text-3xl" href="#dates">Dates</a>
-        </li>
-        <li
-          class="border-t border-gray-600 p-4 md:ml-12 md:border-none md:px-0 md:py-4"
-        >
-          <a class="text-3xl" href="#contact">Contact/Liens</a>
-        </li>
-      </ul>
-      <label
-        class="peer-checked:nav-active absolute right-4 top-0 p-0 md:hidden"
-        for="menu-btn"
-      >
-        <span class="material-symbols-outlined text-4xl">menu</span>
-        <span class="material-symbols-outlined hidden text-4xl">close</span>
-      </label>
-    </nav>
-    <!-- HERO -->
-    <section class="">
-      <picture>
-        <source media="(max-width:768px)" srcset="assets/hero-mobile.png" />
-        <source media="(min-width:768px)" srcset="assets/hero.png" />
-        <img src="assets/hero.png" alt="" class="block w-full" />
-      </picture>
-    </section>
-    <!-- MUSIC -->
-    <section
-      class="mx-auto max-w-3xl px-4 pb-16 pt-0 text-center md:flex md:pt-16 md:text-left"
-      id="music"
-    >
-      <div class="text-lg text-stone-700 md:w-1/2 md:pr-2">
-        <h2 class="mb-8 text-5xl uppercase">Music</h2>
-        <p>
-          Mélodies de cordes et harmonies vocales se mêlent aux percussions dans
-          une alchimie aux sonorités folk.
-        </p>
-        <p class="mb-8">
-          Une ambiance intimiste, un voyage musical fort en émotions.
-        </p>
-        <!-- <div class="mb-16">
-          <a
-            class="mr-4"
-            target="_blank"
-            href="https://open.spotify.com/intl-fr/artist/0a1fB8K1jfq0sr9dy5yGtT"
-            ><i class="fa-2xl fa-brands fa-spotify"></i
-          ></a>
-          <a
-            target="_blank"
-            href="https://www.deezer.com/fr/artist/246154792?deferredFl=1"
-            ><i class="fa-2xl fa-brands fa-deezer"></i
-          ></a>
-        </div> -->
-      </div>
-      <div class="flex justify-center md:block md:w-1/2 md:pl-2">
-        <iframe
-          style="border: 0; width: 400px; height: 208px"
-          src="https://bandcamp.com/EmbeddedPlayer/album=2848253469/size=large/bgcol=ffffff/linkcol=e99708/artwork=small/transparent=true/"
-          seamless
-          ><a href="https://humanbirds.bandcamp.com/album/live"
-            >Live ! de Human Birds</a
-          ></iframe
-        >
-      </div>
-    </section>
-    <!-- VIDEO -->
-    <section class="relative h-64 bg-amber-600 md:h-[75vh]" id="video">
-      <iframe
-        class="absolute left-0 top-0 h-full w-full"
-        src="https://www.youtube.com/embed/1Qj-tFa7GLI"
-        title="Teaser"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </section>
-    <!-- FOOTER -->
-    <section class="mx-auto max-w-4xl px-4 py-16 text-lg md:flex md:space-x-20">
-      <div class="mb-16">
-        <h2 class="mb-8 text-5xl uppercase" id="dates">Dates</h2>
-        <ul>
-          <li class="mb-4">
-            22.06.2024 - <b>Fête de la musique</b> -
-            <em>VOUZON (41)</em>
-          </li>
-          <li class="mb-4">
-            12.07.2024 - <b>Festival Faites du Foin !</b> -
-            <em>FEROLLES (45)</em>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="mb-8 text-5xl uppercase" id="contact">Contacts & Liens</h2>
-        <div class="h-16 md:flex md:items-center">
-          <a
-            class="mr-8"
-            target="_blank"
-            href="mailto:humanbirdsmusic@gmail.com"
-            ><i class="fa-2xl fa-solid fa-envelope"></i
-          ></a>
-          <a
-            class="mr-8"
-            target="_blank"
-            href="https://www.facebook.com/HumanBirdsMusic"
-            ><i class="fa-2xl fa-brands fa-square-facebook"></i
-          ></a>
-          <a
-            class="mr-8"
-            target="_blank"
-            href="https://www.youtube.com/@HumanBirdsMusic"
-            ><i class="fa-2xl fa-brands fa-youtube"></i
-          ></a>
-          <!-- <a class="mr-8" target="_blank" href="https://open.spotify.com/"
-            ><i class="fa-2xl fa-brands fa-spotify"></i
-          ></a> -->
-          <a class="mr-8" target="_blank" href="http://humanbirds.bandcamp.com/"
-            ><i class="fa-2xl fa-brands fa-bandcamp"></i
-          ></a>
-        </div>
-      </div>
-    </section>
-
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
     <script
       src="https://kit.fontawesome.com/c7a7aada7c.js"
       crossorigin="anonymous"
