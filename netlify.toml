@@ -1,8 +1,5 @@
-[build]
-  command = "npm run build"
-  publish = "dist"
-
-[[headers]]
-  for = "/admin"
-  [headers.values]
-    Basic-Auth = ":${ADMIN_USER}:${ADMIN_PASS}"
+[[redirects]]
+  from = "/admin"
+  to = "/.netlify/functions/protect-route"
+  status = 200
+  force = true
