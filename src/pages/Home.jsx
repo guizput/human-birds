@@ -16,7 +16,7 @@ function Home() {
     );
 
   return (
-    <div class="bg-amber-600 bg-bkg bg-cover bg-center bg-no-repeat text-humanBird">
+    <div className="bg-amber-600 bg-bkg bg-cover bg-center bg-no-repeat text-humanBird">
       <Nav data={data.nav} />
       <Hero data={data.hero} />
       <Music data={data.music} />
